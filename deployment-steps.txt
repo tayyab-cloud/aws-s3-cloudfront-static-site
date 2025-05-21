@@ -1,0 +1,24 @@
+AWS Static Website Deployment - Step-by-Step Guide
+
+1. Create S3 Bucket
+   - Uncheck "Block All Public Access"
+   - Enable Static Website Hosting
+   - Upload HTML, CSS, JS files
+   - Set correct permissions
+
+2. Make Files Public
+   - Set bucket policy to allow public read access
+
+3. Create CloudFront Distribution
+   - Origin: S3 Bucket Static Website Endpoint
+   - Viewer Protocol Policy: Redirect HTTP to HTTPS
+   - Caching: Default settings
+   - Web Application Firewall (optional): Disabled
+   - Copy and test CloudFront Domain Name
+
+4. Verify Website
+   - Open the CloudFront domain in browser
+   - Ensure all assets load properly (HTML, CSS, JS)
+
+5. Clean-Up
+   - Delete S3 bucket and CloudFront distribution to avoid cost on Free Tier
